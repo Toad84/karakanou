@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+     <!-- Importation des polices -->
+     <link href="https://fonts.googleapis.com/css2?family=Yesteryear&display=swap" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@900&display=swap" rel="stylesheet">
+     
+     <!-- Fichier CSS personnalisé -->
+     <link rel="stylesheet" href="style.css">
+   
+     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karaoké Live</title>
+
+    <style>
+       body { font-family: Arial, sans-serif; text-align: center; margin: 0; padding: 0; }
+
+       nav a {
+    font-family: 'Bodoni', cursive;
+    font-size: 40px; /* Ajuste la taille si nécessaire */
+}
+
+        /* Classe pour appliquer la police Yesteryear */
+        .font-yesteryear {
+        font-family: 'Bodoni MT Black', serif;
+        font-size: 20px; /* Ajuste la taille ici (par exemple, 24px) */
+    }
+
+        /* Menu de navigation */
+        nav { 
+            background: rgba(0, 0, 0, 0.7); 
+            padding: 15px; 
+            position: absolute; 
+            width: 100%; 
+            top: 0; 
+            left: 0;
+        }
+        nav a { 
+            color: white; 
+            margin: 15px; 
+            text-decoration: none; 
+            font-size: 18px; 
+            padding: 10px; 
+            border-radius: 5px; 
+        }
+        nav a:hover { background: rgba(255, 255, 255, 0.3); }
+
+
+        /* Sections cachées sauf accueil */
+        section { display: none; padding: 50px; }
+        #accueil { 
+            display: block; 
+            height: 100vh; 
+            background: url('affiche.jpg') no-repeat center center/cover; 
+            color: white; 
+            display: flex; 
+            flex-direction: column; 
+            justify-content: center; 
+            align-items: center; 
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.7); 
+        }
+        background-size  contain /* L'image sera entièrement visible sans être coupée */
+background-color black  /* Fond noir si l'affiche ne remplit pas tout */
+background-position center /* Centre bien l'affiche */
+background-repeat no-repeat /* Évite que l'affiche se répète */
+
+
+        
+
+        /* Style du texte d'accueil */
+        #accueil h2 { font-size: 3em; margin-bottom: 10px; }
+        #accueil p { font-size: 1.5em; max-width: 600px; }
+        #accueil { 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    height: 100vh; 
+    background: url('affiche.jpg') no-repeat center center;
+    background-size: contain;
+    background-color: black;
+    color: white; 
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.7); 
+}
+
+
+    </style>
+</head>
+<meta charset="UTF-8">
+<title>Les Chansons - Karakanou</title>
+<style>
+    h2, #songList {
+        font-family: 'Bodoni MT Black', serif;
+    }
+</style>
+<body>
+    <nav>
+        <a href="#" onclick="showSection('accueil')">Accueil</a>
+        <a href="#" onclick="showSection('répertoire')">Répertoire</a>
+        <a href="#" onclick="showSection('contact')">Contact</a>
+    </nav>
+
+    <!-- Page d'accueil avec affiche en plein écran -->
+    <section id="accueil">
+        <h2></h2>
+       </p>
+    </section>
+    
+    <section id="répertoire">
+        <h2>Rechercher une chanson</h2>
+        <input type="text" id="search" placeholder="Tapez le titre..." onkeyup="filterSongs()">
+        <ul id="songList" style="list-style-type: none;">
+            <li>1 - J'veux du soleil</li>
+            <li>2 - Sur la route</li>
+            <li>3 - Santiano</li>
+            <li>4 - Les Comédiens</li>
+            <li>5 - Take on me</li>
+            <li>6 - All that she wants</li>
+            <li>7 - House of the rising sun</li>
+            <li>8 - Barbie girl</li>
+            <li>9 - Heres to you</li>
+            <li>10 - Macumba</li>
+            <li>11 - Laziza</li>
+            <li>12 - Eternal flame</li>
+            <li>13 - Walk like an egyptian</li>
+            <li>14 - L'aigle noir</li>
+            <li>15 - Le p'tit bonheur</li>
+            <li>16 - Stayin' alive</li>
+            <li>17 - Jamaïca Farewell</li>
+            <li>18 - Le Diner</li>
+            <li>19 - Ma philosophie</li>
+            <li>20 - Ella elle l'a</li>
+            <li>21 - La Groupie du pianiste</li>
+            <li>22 - Le Paradis blanc</li>
+            <li>23 - Damit</li>
+            <li>24 - Minnie the Moocher</li>
+            <li>25 - Salade de fruits</li>
+            <li>26 - Amsterdam</li>
+            <li>27 - Les Bourgeois</li>
+            <li>28 - Casser la voix</li>
+            <li>29 - Uptown funk</li>
+            <li>30 - Emmenez-moi</li>
+            <li>31 - Chan Chan</li>
+            <li>32 - El Cuarto de tula</li>
+            <li>33 - Plus rien</li>
+            <li>34 - Can't help falling in love</li>
+            <li>35 - Vois sur ton chemin</li>
+            <li>36 - Mama Sam</li>
+            <li>37 - Wild World</li>
+            <li>38 - Lady D'Arbanville</li>
+            <li>39 - Ring of fire</li>
+            <li>40 - Quand t'es dans le désert</li>
+            <li>41 - Someone you loved</li>
+            <li>42 - La corrida</li>
+            <li>43 - Encore et encore</li>
+            <li>44 - Je l'aime à mourir</li>
+            <li>45 - Petite Marie</li>
+            <li>46 - Proud Mary</li>
+            <li>47 - Have you ever seen the rain</li>
+            <li>48 - Fortunate son</li>
+            <li>49 - Gangsta' paradise</li>
+            <li>50 - Femme Libérée</li>
+            <li>51 - 74 / 75</li>
+            <li>52 - I can see clearly now</li>
+            <li>53 - London calling</li>
+            <li>54 - Should I stay or should I go</li>
+            <li>55 - Siffler sur la colline</li>
+            <li>56 - Vanina</li>
+            <li>57 - Sous le vent</li>
+            <li>58 - Pour que tu m'aimes encore</li>
+            <li>59 - Ciel en sauce</li>
+            <li>60 - Sultans of swing</li>
+            <li>61 - Dirty old town</li>
+            <li>62 - Whiskey in the jar</li>
+            <li>63 - Knocking in the heavens door</li>
+            <li>64 - Save tonight</li>
+            <li>65 - Blowing in the wind</li>
+            <li>66 - Hotel California</li>
+            <li>67 - Déjeuner en paix</li>
+            <li>68 - Punk à chien</li>
+            <li>69 - Lemon Tree</li>
+            <li>70 - Une belle histoire</li>
+            <li>71 - Le poinçonneur des lilas</li>
+            <li>72 - La javanaise</li>
+            <li>73 - Envole-moi</li>
+            <li>74 - Je marche seul</li>
+            <li>75 - Somebody that I used to know</li>
+            <li>76 - You're the one that I want</li>
+            <li>77 - When I come around</li>
+            <li>78 - Demain il pleut</li>
+            <li>79 - Sois pauvre et tais toi</li>
+            <li>80 - My heart will go on</li>
+            <li>81 - Que je t'aime</li>
+            <li>82 - MmmBop</li>
+            <li>83 - Jah Work</li>
+            <li>84 - Get my mind set on you</li>
+            <li>85 - The Passenger</li>
+            <li>86 - Un Monde parfait</li>
+            <li>87 - Je veux être une star</li>
+            <li>88 - Demons</li>
+            <li>89 - C'est toi que je t'aime</li>
+            <li>90 - 3 nuits par semaines</li>
+            <li>91 - L'aventurier</li>
+            <li>92 - Beat it</li>
+            <li>93 - It's not unusual</li>
+            <li>94 - Mercedes Benz</li>
+            <li>95 - Don't stop believin'</li>
+            <li>96 - Hot N cold</li>
+            <li>97 - Aïcha</li>
+            <li>98 - Jailhouse Rock</li>
+            <li>99 - It's now or never</li>
+            <li>100 - Stand by me</li>
+            <li>101 - Shallow</li>
+            <li>102 - Iko iko</li>
+            <li>103 - Wellerman</li>
+            <li>104 - La salsa</li>
+            <li>105 - Mon frère</li>
+            <li>106 - La petite fugue</li>
+            <li>107 - San Francisco</li>
+            <li>108 - Hand in my pocket</li>
+            <li>109 - Ma liberté</li>
+            <li>110 - Unintended</li>
+            <li>111 - Another love</li>
+            <li>112 - Don't look back in anger</li>
+            <li>113 - Dragostea Din Tei</li>
+            <li>114 - Comme elle vient</li>
+            <li>115 - Aux sombres héros de la mer</li>
+            <li>116 - Marlène</li>
+            <li>117 - Come as you are</li>            
+            <li>118 - The man who sold the world</li>
+            <li>119 - Polly</li>
+            <li>120 - Where did you sleep last night</li>
+            <li>121 - Summer night</li>
+            <li>122 - Le lion est mort ce soir</li>
+            <li>123 - Je suis un homme</li>
+            <li>124 - Holidays</li>
+            <li>125 - So lonely</li>
+            <li>126 - Every breath you take</li>
+            <li>127 - Every me every you</li>
+            <li>128 - Where is my mind</li>
+            <li>129 - Je sais pas jouer</li>
+            <li>130 - L'accordéoniste</li>
+            <li>131 - La Foule</li>
+            <li>132 - La Lettre</li>
+            <li>133 - We will rock you</li>
+            <li>134 - Dans mon HLM</li>
+            <li>135 - Dès que le vent soufflera</li>
+            <li>136 - Manu</li>
+            <li>137 - Laisse béton</li>
+            <li>138 - Mistral gagnant</li>
+            <li>139 - Marche à l'ombre</li>
+            <li>140 - I'll be there for you</li>
+            <li>141 - Les p'tits papiers</li>
+            <li>142 - Sittin' on the dock of the bay</li>
+            <li>143 - Californication</li>
+            <li>144 - Otherside</li>
+            <li>145 - Road Trippin</li>
+            <li>146 - Scar tissue</li>
+            <li>147 - Under the bridge</li>
+            <li>148 - Ohne dich</li>
+            <li>149 - Creep</li>
+            <li>150 - Karma Police</li>
+            <li>151 - Everybody Hurts</li>
+            <li>152 - Loosing my religion</li>
+            <li>153 - Lonely day</li>
+            <li>154 - Alright</li>
+            <li>155 - Santeria</li>
+            <li>156 - Gaëlle</li>
+            <li>157 - The Joker</li>
+            <li>158 - Baby one more time</li>
+            <li>159 - L'amour à la machine</li>
+            <li>160 - Foule sentimentale</li>
+            <li>161 - All Star</li>
+            <li>162 - These boots are made for walking</li>
+            <li>163 - Killing me softly</li>
+            <li>164 - Fly me to the moon</li>
+            <li>165 - The sound of silence</li>
+            <li>166 - Goodnight moon</li>
+            <li>167 - Whenever Wherever</li>
+            <li>168 - Wind of change</li>
+            <li>169 - Jeune et con</li>
+            <li>170 - Les cigales</li>
+            <li>171 - Les hommes que j'aime</li>
+            <li>172 - Tu parles trop</li>
+            <li>173 - Be my baby</li>
+            <li>174 - Paint it black</li>
+            <li>175 - Quel beau jour vraiment</li>
+            <li>176 - Alexandrie Alexandra</li>
+            <li>177 - Mad world</li>
+            <li>178 - Un autre monde</li>
+            <li>179 - Ca c'est vraiment toi</li>
+            <li>180 - Cendrillon</li>
+            <li>181 - Je t'en remets au vent</li>
+            <li>182 - La cancoillotte</li>
+            <li>183 - La fille du coupeur de joints</li>
+            <li>184 - Chacun sa route</li>
+            <li>185 - Dans les prisons de Nantes</li>
+            <li>186 - Les filles des forges</li>
+            <li>187 - Pas assez de toi</li>
+            <li>188 - Je ne t'aime plus</li>
+            <li>189 - Mala vida</li>
+            <li>190 - Lambé en dro</li>
+            <li>191 - Les moutons</li>
+            <li>192 - Emma</li>
+            <li>193 - Tout nu sur la plage</li>
+            <li>194 - L'hymne de nos campagnes</li>
+            <li>195 - Sunday Bloody Sunday</li>
+            <li>196 - Kingston Town</li>
+            <li>197 - Hélène</li>
+            <li>198 - Faded</li>
+            <li>199 - Undone</li>
+            <li>200 - Island in the sun</li>
+            <li>201 - Hash Pipe</li>
+            <li>202 - Seven nation army</li>
+            <li>203 - Hey Jude</li>
+            <li>204 - Let it be</li>
+            <li>205 - Obladi oblada</li>
+            <li>206 - Yesterday</li>
+            <li>207 - Le Pornographe</li>
+            <li>208 - La complainte des filles de joie</li>
+            <li>209 - Les Copains d'abord</li>
+            <li>210 - Dans l'eau de la claire fontaine</li>
+            <li>211 - Je m'suis fait tout p'tit</li>
+            <li>212 - L'orage</li>
+            <li>213 - Putain de toi</li>
+            <li>214 - Dreaming of you</li>
+            <li>215 - Drunken Sailor</li>
+            <li>216 - Hallelujah</li>
+            <li>217 - Porque te vas</li>
+            <li>218 - The wonder of you</li>
+            <li>219 - With or without you</li>
+            <li>220 - What's up</li>
+            <li>221 - Stand by your man</li>
+            <li>222 - Big city life</li>
+            <li>223 - Under the mango tree</li>
+            <li>224 - Tuesday's gone</li>
+            <li>225- I will survive</li>
+            <li>226 - Born to be alive</li>
+            <li>227 - Léa</li>
+            <li>228 - Clandestino</li>
+            <li>229 - Angie</li>
+            <li>230 - Redemption song</li>
+            <li>231 - No woman no cry</li>
+            <li>232 - Three little birds</li>
+            <li>233 - Je t'emmène au vent</li>
+            <li>234 - Bella Ciao</li>
+            <li>235 - Somewhere over the rainbow</li>
+            <li>236 - Zombie</li>
+            <li>237 - Just my imagination</li>
+            <li>238 - The roof is on fire</li>
+            <li>239 - Chasey Lain</li>
+            <li>240 - Jump in the line</li>
+            <li>241 - Ma Faute à toi</li>
+            <li>242 - Spin Doctor</li>
+            <li>243 - Les cactus</li>
+            <li>244 - Nicky Larson</li>
+            <li>245 - Les Mystérieuses cités d'or</li>
+            <li>246 - La Légende d'Actarus</li>
+            <li>247 - La carioca</li>
+            <li>248 - L'île aux enfants</li>
+            <li>249 - Les mondes englouti</li>
+            <li>250 - Ulysse revient</li>
+
+        </ul>
+    </section>
+    
+    <script>
+        function normalizeString(str) {
+            return str
+                .normalize("NFD").replace(/[\u0300-\u036f]/g, "")  
+                .replace(/['’]/g, "'")  
+                .toLowerCase();
+        }
+
+        function filterSongs() {
+            let input = document.getElementById("search").value.toLowerCase();
+            let list = document.getElementById("songList").getElementsByTagName("li");
+        
+            for (let i = 0; i < list.length; i++) {
+                let song = list[i].textContent.toLowerCase();
+                if (song.includes(input)) {
+                    list[i].style.display = "block";
+                } else {
+                    list[i].style.display = "none";
+                }
+            }
+        }
+    </script>
+
+    <!-- Section Contact avec police Yesteryear -->
+    <section id="contact" class="py-8 text-center font-yesteryear">
+        <div class="flex flex-col items-center">
+            <img src="logo.png" alt="Logo Les Productions de l'Est" class="w-7 h-7 mb-4" />
+            <p class="mb-2">Le Karakanou est une création des Productions de l'Est.</p>
+        </div>
+        <p>Pour toute information, n'hésitez pas à nous contacter :</p>
+        <div class="mt-4">
+            <p>Mail : lesproductionsdelest@gmail.com</p>
+            <p>Téléphone : 07 69 39 62 28</p>
+        </div>
+        <div className="flex flex-col items-center mt-4">
+            <a href="https://www.facebook.com/ton_page_facebook" target="_blank">
+                <img src="facebook_qr.png" alt="QR Code Facebook" className="w-5 h-5 mb-4" />
+            </a>
+            <p>Scannez le QR code pour visiter la page Facebook des musiciens du Karakanou !</p>
+        </div>
+    </section>
+
+    <script>
+        function showSection(sectionId) {
+            document.querySelectorAll('section').forEach(sec => sec.style.display = 'none');
+            document.getElementById(sectionId).style.display = 'block';
+        }
+    </script>
+</body>
+</html>
